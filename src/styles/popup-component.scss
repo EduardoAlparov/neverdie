@@ -1,0 +1,220 @@
+
+.popup {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: $bg_dark;
+        @include tablets {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    &__header {
+
+    }
+    &__question{
+        flex-grow: 1;
+    }
+}
+.header {
+    height: 225px;
+    min-height: 225px;
+    border-bottom: 1px solid $text_color_grey;
+    @include tablets{
+        height: 125px;
+        min-height: 125px;
+    }
+
+    &__container {
+        position: relative;
+        // padding: 48px 0 37px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        @include tablets {
+            height: 100%;
+            padding: 0;
+        }
+    }
+
+    &__text {
+
+    }
+    &__image {
+        position: absolute;
+        width: 146px;
+        height: 77px;
+
+        bottom: 0px;
+        left: calc(100% - 105px);
+
+        mask-image: url('../assets/eye-2.svg');
+        background-color: $text_color_grey;
+        @include tablets {
+            width: 83px;
+            height: 44px;
+            mask-image: url('../assets/eye83px.svg');
+            left: unset;
+            right: -30px;
+        }
+    }
+    &__baloon {
+        width: 480px;
+        height: 184px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 50;
+        @include tablets {
+            width: 266px;
+            height: 80px;
+        }
+        span {
+            color: $text_color_grey;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -19px;
+            right: 40px;
+            border-style: solid;
+            border-width: 19px 10.5px 0 10.5px;
+            border-color: #FFF transparent transparent transparent;
+        }
+    }
+}
+.question-block {
+    height: 100%;
+    // .question-block__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        height: 100%;
+        position: relative;
+        
+        @include tablets {
+            
+            
+        }
+    }
+
+    // .question-block__title
+    &__title {
+        margin-bottom: 48px;
+        margin-bottom: 40px;
+    }
+
+    // .question-block__buttons
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 58px;
+        padding-top: 130px;
+        @include tablets {
+            padding-top: 35px;
+        }
+    }
+
+    // .question-block__button
+    &__button {
+        margin-bottom: 35px;
+        @include tablets {
+            margin-bottom: 20px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .question-block__desc
+    &__desc {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: $text_color_grey;
+        font-family: Roboto;
+        margin-top: unset;
+        padding-bottom: 35px;
+        @include tablets {
+            padding-bottom: 46px;
+            margin-top: auto;
+        }
+    }
+
+    // .question-block__image
+    &__image {
+        width: 90px;
+        height: 90px;
+        transform: translateX(-300%);
+        mask-image: url('../assets/eye-3.svg');
+        background-color: $text_color_grey;
+        margin-bottom: 36px;
+
+        @include tablets {
+            width: 52px;
+            height: 52px;
+            mask-image: url('../assets/eye50px.svg');
+            margin-bottom: 36px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-50% , -50%);
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+
+.select {
+    position: relative;
+    margin-bottom: 35px;
+    @include tablets {
+        margin-bottom: 20px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    // .select__button
+    &__button {
+    }
+
+    // .select__arrow
+    &__arrow {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 7.5px 0 7.5px;
+        border-color: #202024 transparent transparent transparent;
+        transition: 0.5s;
+        pointer-events: none;
+        @include tablets {
+            top: 18px;
+        }
+    }
+}
+
+.select__button:hover ~ .select__arrow{
+transform: rotate(-180deg);
+}

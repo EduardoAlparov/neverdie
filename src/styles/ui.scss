@@ -1,0 +1,181 @@
+._ibg{
+    position: relative;
+    img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+._title{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    max-width: 500px;
+    @include tablets {
+        font-size: 16px;
+    }
+}
+
+._button{
+    min-width: 360px;
+    min-height: 70px;
+    border-radius: 35px;
+    background:  linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%), linear-gradient(90deg, rgba(246, 200, 102, 0.9) -6.2%, rgba(254, 173, 53, 0.9) 100%);
+    background-size: 200%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    animation: 3s ease-in-out 0s infinite alternate move_eye;
+
+    @include tablets {
+        min-width: 182px;
+        min-height: 40px;
+        font-size: 14px;
+    }
+    @media (hover: hover) {
+        &:hover {
+            animation: none;
+        }
+    }
+}
+
+._text{
+    color: $text_color_white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @include tablets {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+    }
+}
+
+._pophead-text {
+    max-width: 415px;
+    color: $text_color_white;
+    font-family: 'Bad Script', cursive;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+    @include tablets {
+        max-width: 235px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+}
+
+._link{
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    @include tablets {
+        font-size: 16px;
+    }
+}
+
+// select button 
+
+
+._select-button {
+    min-width: 360px;
+    min-height: 70px;
+    border-radius: 35px;
+    background: linear-gradient(90deg, rgba(228, 228, 228, 0.9) -6.2%, rgba(203, 203, 203, 0.9) 100%);
+    background-repeat: no-repeat, no-repeat;
+    color: #202024;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    &:hover {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #EE5353;
+    }
+
+    @include tablets {
+        min-width: 182px;
+        min-height: 40px;
+        font-size: 14px;
+    }
+}
+
+._green-btn {
+    min-width: 395.07px;
+    min-height: 79.67px;
+    background: linear-gradient(248.67deg, rgba(255, 255, 255, 0) 30.84%, rgba(255, 255, 255, 0.29) 46.06%, rgba(255, 255, 255, 0) 64.04%), linear-gradient(90deg, rgba(76, 217, 100, 0.9) -6.2%, rgba(50, 185, 73, 0.9) 100%);
+    background-size: 200%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    animation: 3s ease-in-out 0s infinite alternate move_eye;
+
+    @include tablets {
+        min-width: 242px;
+        min-height: 48px;
+        font-size: 14px;
+    }
+    
+    @media (hover: hover) {
+        &:hover {
+            animation: none;
+        }
+    }
+}
+
+._uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+._uppercase-nonbold {
+    text-transform: uppercase;
+}
+
+@keyframes move_eye { from { background-size: 10%, 100%; } to { background-size: 200%, 100%; }  }       
